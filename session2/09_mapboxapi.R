@@ -7,7 +7,7 @@ library(leaflet)
 mb_access_token("pk.ey......", install = TRUE)
 
 # mb_isochrone
-walk_5min <- mb_isochrone("Schlossplatz 1, Berlin",
+walk_5min <- mb_isochrone("NW1 4SA",
                           profile = "walking",
                           time = 7)
 
@@ -18,7 +18,7 @@ leaflet(walk_5min) %>%
 
 
 # mb_isochrone + mapdeck interactive map
-isochrones <- mb_isochrone("Schlossplatz 1, Berlin", 
+isochrones <- mb_isochrone("NW1 4SA", 
                            time = c(5, 10, 20),
                            profile = "cycling") 
 
@@ -31,8 +31,8 @@ mapdeck(style = mapdeck_style("light")) %>%
 
 # routing
 my_route <- mb_directions(
-  origin = "Schlossplatz 1, Berlin",
-  destination = "British Library, London",
+  origin = "NW1 4SA",
+  destination = "Athens, Greece",
   profile = "driving",
   steps = TRUE,
   language = "en" #https://docs.mapbox.com/api/navigation/directions/#instructions-languages # en is the default option
